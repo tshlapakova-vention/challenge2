@@ -24,7 +24,12 @@
         <option value="all">All Categories</option>
       </select>
       <label class="search-wrap" for="searchInput">
-        <span class="search-icon">&#128269;</span>
+        <span class="search-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <circle cx="11" cy="11" r="6.5"></circle>
+            <path d="M16 16l5 5"></path>
+          </svg>
+        </span>
         <input id="searchInput" type="text" placeholder="Search employee..." />
       </label>
     </section>
@@ -65,9 +70,6 @@
     </section>
 
     <section class="list" aria-label="Leaderboard list">
-      <div class="list-head">
-        <button id="sortTotal" type="button" class="sort-btn" aria-label="Sort by total points">TOTAL <span class="arrow">↕</span></button>
-      </div>
       <div id="rows"></div>
     </section>
   </main>
