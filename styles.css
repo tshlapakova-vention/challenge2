@@ -1,0 +1,402 @@
+:root {
+  --bg: #eef0f3;
+  --panel: #f2f4f7;
+  --border: #cfd6df;
+  --text: #0f1d33;
+  --muted: #76869f;
+  --accent: #1a9be9;
+  --gold: #f0d46b;
+  --gold-soft: #efe3b5;
+  --silver-soft: #d8dfe8;
+  --bronze: #b8793a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 14px 14px 10px;
+}
+
+.top h1 {
+  margin: 0;
+  font-size: 42px;
+  line-height: 1;
+  letter-spacing: 0.2px;
+}
+
+.top p {
+  margin: 10px 0 20px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.toolbar {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  display: grid;
+  grid-template-columns: 160px 160px 170px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+select,
+.search-wrap input {
+  width: 100%;
+  border: 1px solid #838b98;
+  height: 34px;
+  border-radius: 2px;
+  padding: 0 9px;
+  font-size: 13px;
+  color: #2f3f56;
+  background: #f5f6f7;
+}
+
+.search-wrap {
+  position: relative;
+  display: block;
+}
+
+.search-wrap input {
+  padding-left: 34px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  color: #66788f;
+  font-size: 13px;
+}
+
+.podium {
+  margin: 24px auto 6px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(190px, 1fr));
+  max-width: 980px;
+  align-items: end;
+  gap: 24px;
+}
+
+.podium-card {
+  text-align: center;
+}
+
+.avatar-stack {
+  position: relative;
+  width: 96px;
+  margin: 0 auto;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 2px 8px rgba(15, 30, 51, 0.18);
+}
+
+.badge {
+  position: absolute;
+  right: -6px;
+  bottom: 6px;
+  min-width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.first .badge {
+  background: #ebb40b;
+}
+
+.second .badge {
+  background: #93a4b9;
+}
+
+.third .badge {
+  background: #ab6b2d;
+}
+
+.person-name {
+  margin-top: 10px;
+  color: #e53d3d;
+  font-size: 17px;
+  font-weight: 600;
+  min-height: 24px;
+}
+
+.person-role {
+  margin-top: 2px;
+  color: #2fcd12;
+  font-size: 15px;
+  min-height: 20px;
+}
+
+.points-pill {
+  margin: 10px auto 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  border: 1px solid #c2ccda;
+  background: #edf2f7;
+  color: var(--accent);
+  font-weight: 700;
+  padding: 5px 14px;
+}
+
+.first .points-pill {
+  border-color: #d8b844;
+  color: #c79200;
+  background: #f6ebc3;
+}
+
+.star {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.rank-block {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  font-size: 88px;
+  line-height: 1;
+  font-weight: 700;
+  color: rgba(126, 146, 172, 0.2);
+  padding: 34px 0 14px;
+  margin-top: 4px;
+}
+
+.second .rank-block,
+.third .rank-block {
+  background: var(--silver-soft);
+}
+
+.first .rank-block {
+  background: var(--gold-soft);
+  color: rgba(235, 180, 11, 0.35);
+}
+
+.list {
+  margin-top: 22px;
+}
+
+.list-head {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+  padding-right: 10px;
+}
+
+.sort-btn {
+  border: none;
+  background: transparent;
+  color: #9da8ba;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.sort-btn .arrow {
+  color: #95a6bf;
+  font-size: 12px;
+  margin-left: 6px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 32px 74px 1fr 52px 52px 118px 36px;
+  align-items: center;
+  border: 1px solid var(--border);
+  background: #f3f5f7;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7) inset;
+}
+
+.rank-num {
+  text-align: center;
+  color: #6f829d;
+  font-size: 29px;
+}
+
+.row-avatar {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.row-main {
+  min-width: 0;
+}
+
+.row-main .name {
+  color: #e53d3d;
+  font-size: 26px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.row-main .role {
+  color: #2fcd12;
+  font-size: 20px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.metric {
+  text-align: center;
+  color: #7d8ca2;
+}
+
+.metric .icon {
+  display: block;
+  color: var(--accent);
+  font-size: 18px;
+  line-height: 1;
+}
+
+.metric .value {
+  font-size: 11px;
+  margin-top: 3px;
+}
+
+.total {
+  text-align: center;
+}
+
+.total .lbl {
+  color: #a5b0c2;
+  display: block;
+  font-size: 10px;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.total .points {
+  color: var(--accent);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.total .points .star {
+  font-size: 32px;
+  margin-right: 4px;
+}
+
+.chevron {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid #ccdae8;
+  color: #a8bbcf;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .top h1 {
+    font-size: 34px;
+  }
+
+  .person-name {
+    font-size: 15px;
+  }
+
+  .person-role {
+    font-size: 13px;
+  }
+
+  .row-main .name {
+    font-size: 20px;
+  }
+
+  .row-main .role {
+    font-size: 16px;
+  }
+
+  .total .points {
+    font-size: 28px;
+  }
+
+  .row {
+    grid-template-columns: 28px 60px 1fr 42px 42px 102px 30px;
+  }
+
+  .row-avatar {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 860px) {
+  .toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .podium {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+  }
+
+  .first {
+    order: -1;
+  }
+
+  .row {
+    grid-template-columns: 28px 52px 1fr 88px;
+    gap: 8px;
+  }
+
+  .metric {
+    display: none;
+  }
+
+  .total {
+    text-align: right;
+  }
+
+  .chevron {
+    justify-self: end;
+  }
+
+  .row-main .name {
+    font-size: 17px;
+  }
+
+  .row-main .role {
+    font-size: 14px;
+  }
+
+  .total .points {
+    font-size: 24px;
+  }
+}

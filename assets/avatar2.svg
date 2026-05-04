@@ -1,0 +1,12 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fake avatar 2">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbc2eb"/>
+      <stop offset="1" stop-color="#a6c1ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" fill="url(#bg2)"/>
+  <circle cx="64" cy="52" r="24" fill="#f3ccae"/>
+  <path d="M39 42c3-11 14-18 25-18s22 7 25 18c-8-2-15-3-25-3s-17 1-25 3z" fill="#563f67"/>
+  <path d="M42 89c8-11 16-16 22-16s14 5 22 16v24H42z" fill="#5f7fa6"/>
+</svg>

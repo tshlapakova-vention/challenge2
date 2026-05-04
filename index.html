@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <h1>Leaderboard</h1>
+      <p>Top performers based on contributions and activity</p>
+    </header>
+
+    <section class="toolbar">
+      <select id="yearFilter" aria-label="Filter by year">
+        <option value="all">All Years</option>
+      </select>
+      <select id="quarterFilter" aria-label="Filter by quarter">
+        <option value="all">All Quarters</option>
+      </select>
+      <select id="categoryFilter" aria-label="Filter by category">
+        <option value="all">All Categories</option>
+      </select>
+      <label class="search-wrap" for="searchInput">
+        <span class="search-icon">&#128269;</span>
+        <input id="searchInput" type="text" placeholder="Search employee..." />
+      </label>
+    </section>
+
+    <section class="podium" aria-label="Top 3 leaderboard">
+      <article class="podium-card second" id="podium-second">
+        <div class="avatar-stack">
+          <img class="avatar" src="assets/avatar2.svg" alt="Avatar of Olivia Martinez">
+          <span class="badge badge-rank">2</span>
+        </div>
+        <div class="person-name">Olivia Martinez</div>
+        <div class="person-role">Frontend Developer</div>
+        <div class="points-pill"><span class="star">★</span><span class="podium-points"></span></div>
+        <div class="rank-block">2</div>
+      </article>
+
+      <article class="podium-card first" id="podium-first">
+        <div class="avatar-stack">
+          <img class="avatar" src="assets/avatar1.svg" alt="Avatar of Ethan Brooks">
+          <span class="badge badge-rank">1</span>
+        </div>
+        <div class="person-name">Ethan Brooks</div>
+        <div class="person-role">Product Designer</div>
+        <div class="points-pill"><span class="star">★</span><span class="podium-points"></span></div>
+        <div class="rank-block">1</div>
+      </article>
+
+      <article class="podium-card third" id="podium-third">
+        <div class="avatar-stack">
+          <img class="avatar" src="assets/avatar3.svg" alt="Avatar of Noah Bennett">
+          <span class="badge badge-rank">3</span>
+        </div>
+        <div class="person-name">Noah Bennett</div>
+        <div class="person-role">Data Analyst</div>
+        <div class="points-pill"><span class="star">★</span><span class="podium-points"></span></div>
+        <div class="rank-block">3</div>
+      </article>
+    </section>
+
+    <section class="list" aria-label="Leaderboard list">
+      <div class="list-head">
+        <button id="sortTotal" type="button" class="sort-btn" aria-label="Sort by total points">TOTAL <span class="arrow">↕</span></button>
+      </div>
+      <div id="rows"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
